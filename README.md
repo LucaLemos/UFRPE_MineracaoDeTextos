@@ -24,7 +24,7 @@ We evaluated the models using Precision, Recall, and F1-score metrics. The resul
 
 ## Model Performance
 
-![Model Performance](compareModel_files\compareModel_8_0.png)
+![Model Performance](compareModel_files/compareModel_8_0.png)
 
 ### Analysis
 
