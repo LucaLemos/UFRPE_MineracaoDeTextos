@@ -4,17 +4,9 @@ pt_core_news_sm
 pt_core_news_md
 pt_core_news_lg
 
-# Model Comparison
-
-This document provides a comparison of three SpaCy models trained for named entity recognition (NER) on our dataset. The models evaluated are:
-
-- `model_sm` (Small)
-- `model_md` (Medium)
-- `model_lg` (Large)
-
 ## Evaluation Metrics
 
-We evaluated the models using Precision, Recall, and F1-score metrics. The results are summarized in the table below.
+Nós avaliamos os modelos utilizando as métricas de Precisão, Recall e F1-score. Os resultados estão resumidos na tabela abaixo.
 
 | Model     | Precision | Recall  | F1-score |
 |-----------|-----------|---------|----------|
@@ -29,14 +21,14 @@ We evaluated the models using Precision, Recall, and F1-score metrics. The resul
 ### Analysis
 
 - **`model_sm`**: 
-  - The smallest model has balanced precision and recall but slightly lower metrics compared to the other models. It may be suitable if computational resources are limited.
+  - O model_sm apresenta uma precisão e um recall bastante equilibrados, com um F1-score relativamente bom. No entanto, comparado aos modelos maiores, ele tem um desempenho um pouco inferior.
 
 - **`model_md`**: 
-  - Shows improved precision and recall over `model_sm`, indicating a more effective model for entity recognition. The improvement in F1-score suggests it offers a better balance between precision and recall.
+  - O model_md mostra uma leve melhoria em precisão e recall em relação ao model_sm. O F1-score também é um pouco melhor, o que indica uma performance um pouco mais robusta e equilibrada.
 
 - **`model_lg`**: 
-  - The largest model delivers the highest precision, recall, and F1-score, making it the most effective for entity recognition. Its superior performance likely results from its increased complexity and capacity to understand and process data.
+  - O model_lg se destaca com as melhores métricas entre os três modelos. A precisão e o recall são significativamente maiores, e o F1-score é o melhor de todos. Isso sugere que o model_lg é o mais eficaz para a tarefa de reconhecimento de entidades, possivelmente devido ao seu maior tamanho e complexidade.
 
 ### Conclusion
 
-The `model_lg` demonstrates the best overall performance, making it the preferable choice if computational resources are available. The `model_md` offers a good balance of performance and efficiency, while `model_sm` is best suited for environments with limited resources.
+O modelo model_lg demonstra o melhor desempenho geral, com precisão, recall e F1-score mais altos, indicando que ele é o mais capaz de identificar e classificar as entidades no seu conjunto de dados. Os modelos menores (model_sm e model_md) ainda são eficazes, mas a performance deles é um pouco inferior comparada ao modelo maior. Se o custo computacional não for um problema, o model_lg é a melhor escolha para a tarefa.
