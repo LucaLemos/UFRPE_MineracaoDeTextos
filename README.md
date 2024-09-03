@@ -24,7 +24,7 @@ We evaluated the models using Precision, Recall, and F1-score metrics. The resul
 
 ## Model Performance
 
-![Model Performance](path/to/your/plot.png)
+![Model Performance](compareModel_files\compareModel_8_0.png)
 
 ### Analysis
 
@@ -40,15 +40,3 @@ We evaluated the models using Precision, Recall, and F1-score metrics. The resul
 ### Conclusion
 
 The `model_lg` demonstrates the best overall performance, making it the preferable choice if computational resources are available. The `model_md` offers a good balance of performance and efficiency, while `model_sm` is best suited for environments with limited resources.
-
-### Recommendations
-
-- **If computational resources are a constraint**: Consider using `model_md` for a good balance of performance and efficiency.
-- **For the best performance**: `model_lg` is the best choice, provided that you can handle the increased computational cost.
-- **Further tuning**: You might want to explore fine-tuning hyperparameters or data augmentation techniques to potentially boost the performance of the models even further.
-
-## Files
-
-- [Comparison Script](path/to/compareModel.md)
-- [Dataset](path/to/dataset.jsonl)
-- [Plot Image](path/to/your/plot.png)
