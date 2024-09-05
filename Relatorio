@@ -1,0 +1,35 @@
+Análise do Dataset
+
+Durante a análise inicial do dataset, foi possível observar a estrutura das palavras e suas respectivas tags associadas. O objetivo principal deste projeto é realizar um fine-tuning dos modelos do spaCy para que eles possam identificar e classificar as tags presentes no dataset de forma autônoma e eficiente.
+
+Desenvolvimento do Projeto
+
+O projeto envolve o ajuste fino dos modelos do spaCy para que eles possam analisar e gerar as tags do dataset de maneira independente. A primeira etapa consistiu em realizar testes iniciais utilizando o tratamento básico do dataset, dividido em conjuntos de treino e teste. Após a inclusão das tags no modelo, foi possível observar alguns problemas nos resultados iniciais.
+
+Modelos Utilizados: pt_core_news_sm, pt_core_news_md e pt_core_news_lg
+
+O spaCy oferece diferentes modelos pré-treinados para o processamento da língua portuguesa, cada um com capacidades e tamanhos diferentes, influenciando o desempenho e o tempo de processamento.
+
+pt_core_news_sm (Small): É o modelo mais leve, projetado para ser rápido e eficiente em termos de recursos computacionais. Apesar de sua velocidade, ele possui menos parâmetros e, portanto, apresenta uma menor precisão em algumas tarefas mais complexas. Este modelo é indicado para tarefas mais simples ou onde o desempenho de memória é uma preocupação.
+
+pt_core_news_md (Medium): É um modelo intermediário, que oferece um equilíbrio entre precisão e desempenho. Ele contém mais informações de vetores de palavras e representações, tornando-o mais adequado para tarefas que exigem um melhor entendimento sem comprometer drasticamente o tempo de processamento.
+
+pt_core_news_lg (Large): É o maior e mais completo modelo da série, contendo uma rica representação de vetores e maior capacidade de processamento linguístico. Embora mais preciso, ele requer mais recursos de memória e processamento, sendo mais indicado para tarefas que demandam alta qualidade nas previsões e análises.
+
+A escolha entre esses modelos depende da necessidade do projeto: se o foco for velocidade e eficiência, o pt_core_news_sm pode ser suficiente, mas para maior precisão, o pt_core_news_md ou pt_core_news_lg são mais indicados.
+
+Problemas Identificados
+
+Partição Incorreta do Dataset: Durante os testes, foi detectado que o modelo ocasionalmente realiza uma partição diferente da proposta no dataset. Isso resulta em previsões de tags com tamanhos variados, o que compromete a análise básica de desempenho do modelo.
+
+Erro de Previsão e Aviso: Outro problema identificado foi um aviso gerado devido à presença do caractere '-' no dataset, o qual confundiu a divisão de palavras pelo modelo. Esse problema resultou em dificuldades adicionais na análise do desempenho.
+
+Passos para Melhoria
+
+Para melhorar o desempenho do projeto, foram tomadas as seguintes medidas:
+
+Ajuste dos Spans das Entidades: Foi necessário ajustar os spans das entidades ao converter os dados para o formato do spaCy. Esse ajuste visa aprimorar o reconhecimento das palavras e corrigir o aviso gerado anteriormente.
+
+Análise Refinada do Desempenho: Em vez de realizar uma comparação definitiva do desempenho do modelo, foi criado um dicionário a partir da separação prevista das palavras. Isso possibilita uma comparação mais detalhada e refinada do desempenho do modelo, permitindo uma avaliação mais precisa da eficácia das previsões.
+
+Essas etapas visam não apenas corrigir os problemas identificados, mas também aprimorar a capacidade do modelo em lidar com as peculiaridades do dataset e melhorar a sua precisão na classificação das tags.
